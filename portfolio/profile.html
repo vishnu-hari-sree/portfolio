@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        #profile {
+            border: 2px solid #333;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        #name {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        #contact {
+            margin-top: 10px;
+        }
+
+        #menu {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .menu-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        a {
+        color: rgb(167, 163, 165);
+        text-decoration: none;
+        }
+
+
+        #content {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #contact-info > a > img{
+            margin-top: 20px;
+            width: 3rem;
+        }
+
+        .contact-section{
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .banner{
+            display: flex;
+            justify-content: center;
+        }
+
+        .experience {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem 1rem ;
+        }
+
+        .visible{
+            display: block;
+        }
+        .hidden {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img id="profile" src="Image/Vishnu1.jpg" alt="Profile Image with Stroke">
+        <div id="name">Vishnu Hari Sree</div>
+        <div id="contact">
+            <a href="mailto:vishnuharisree10@gmail.com">vishnuharisree10@gmail.com</a>
+        </div>
+    </header>
+
+    <div id="menu">
+        <button class="menu-button" onclick="showAchievements()">Achievements</button>
+        <button class="menu-button" onclick="showWork()">Work</button>
+        <button class="menu-button" onclick="showContact()">Contact</button>
+    </div>
+
+    <div id="content">
+        <div id="achievements" class="hidden">
+            <p>Student Police Cadet (2015-2017)<br><br>Member of Sciencia Club,
+                Regional Science Center Calicut (2015-2016)<br><br>Scout and Guides (2018-2020)<br><br>State Level Science Camp -
+                Shasthrapadham at IISER TVM (2019)<br><br>Overnight Hackathon -
+                Dusk Till Dawn<br><br>Cyber Security Workshop - HACKTIV<br><br>Blockchain Workshop - Def<br><br>FOSS Fosera Hackathon Second prize<br><br>IEEE C programming Quiz Competition First prize</p>
+        </div>
+
+        <div id="work" class="hidden">
+            <img src="Image/Online Webinar Neetha nssce.png" alt="Work Image 1">
+            <img src="Image/page 17 End page (1).png" alt="Work Image 2">
+            <img src="Image/uninon.png" alt="Work Image 3">
+        </div>
+
+        <div id="contact-info" class="hidden">
+            <a href="https://www.youtube.com/c/VHSCREATIONS" target="_blank"><img src="Image/youtube.png" alt="YouTube"></a>
+            <a href="https://instagram.com/vishnu_hari_sree?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><img src="Image/instagram.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/in/vishnu-harisree-531b8a25a" target="_blank"><img src="Image/linkedin.png" alt="LinkedIn"></a>
+        </div>
+    </div>
+
+    <script>
+        function showAchievements() {
+            document.getElementById('achievements').className = "visible";
+            document.getElementById('work').className = "hidden";
+            document.getElementById('contact-info').className = "hidden";
+        }
+
+        function showWork() {
+            document.getElementById('achievements').className = "hidden";
+            document.getElementById('work').className = "experience";
+            document.getElementById('contact-info').className = "hidden";
+        }
+
+        function showContact() {
+            document.getElementById('achievements').className = "hidden";
+            document.getElementById('work').className = "hidden";
+            document.getElementById('contact-info').className = "visible contact-section";
+        }
+    </script>
+</body>
+</html>
